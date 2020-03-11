@@ -293,6 +293,11 @@ public class Controller
         }
     }
 
+    public Location getLocationByName(string s)
+    {
+        return gameState.getLocationByName(s);
+    }
+
     /*public void printWrapRewards(List<Tuple<String, int>> rewards)
     {
         view.displayWrapRewards(rewards);

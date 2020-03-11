@@ -10,6 +10,12 @@ namespace DeadWood
     {
 
         public Text textBox;
+        public Text titleBox;
+
+        private void Start()
+        {
+            titleBox.text = Controller.cont.getLocationByName("Castle").name;
+        }
 
         // Update is called once per frame
         void Update()
