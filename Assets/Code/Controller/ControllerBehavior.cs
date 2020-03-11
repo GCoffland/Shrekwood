@@ -7,7 +7,7 @@ public class ControllerBehavior : MonoBehaviour
     Controller cont = Controller.cont;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         cont.ProgramStartup();
         cont.GameStartUp();
