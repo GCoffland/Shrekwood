@@ -1,0 +1,677 @@
+<?xml version="1.0"?>
+<cards>
+  <card name="Taven Troubles" img="01.png" budget="4">
+    <scene number="7">
+      Far Far Away has many beautiful sights, this ain't one of em.
+    </scene>
+    <part name="Bar Thief" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Finders keepers!</line>
+    </part>
+    <part name="Cackling Witch" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>HEHEHEHEHEHE!</line>
+    </part>
+    <part name="Crazy Cyclops" level="4">
+      <area x="145" y="47" h="40" w="40" />
+      <line>LEMME AT EM'!</line>
+    </part>
+  </card>
+  <card name="The Giant Claw" img="02.png" budget="3">
+    <scene number="20">
+      A giant claw appears out of the sky and attacks things. BOOOM-BANG-AAAAH!
+    </scene>
+    <part name="Screaming man" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>AHH A GIANT CLAW!</line>
+    </part>
+    <part name="Window Washer" level="2">
+      <area x="83" y="47" h="40" w="40" />
+      <line>What in the hay?</line>
+    </part>
+    <part name="Talking Mule" level="4">
+      <area x="145" y="47" h="40" w="40" />
+      <line>I can say anything?</line>
+    </part>
+  </card>
+  <card name="Mazes and Monsters" img="03.png" budget="5">
+    <scene number="22">
+      Disheartened by his late mothers farm yield and his poor choice of
+      investment partners, Shrekolas Cage sets off into the Elf Nation to
+      steal the declaration of independence.
+    </scene>
+    <part name="Talking Dog" level="5">
+      <area x="53" y="47" h="40" w="40" />
+      <line>But what if it doesn't exist?</line>
+    </part>
+    <part name="Shrekolas Cage" level="6">
+      <area x="115" y="47" h="40" w="40" />
+      <line>After 180 years of searching, I'm only three feet away.</line>
+    </part>
+  </card>
+  <card name="SHREKNADO" img="04.png" budget="5">
+    <scene number="32">
+      Off the coast of Far Far Away, the ship of shark fin smuggler Humpty Dumpty is caught in a cyclone,
+      interrupting his meeting with a potential buyer. A tornado throws swarms of sharks onto the boat, eating all aboard.
+      Eventually making it's way to Far Far Away, who will stop it?
+    </scene>
+    <part name="Drunk" level="3">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Where's Humpty?</line>
+    </part>
+    <part name="The Cook" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Where did my onions go?!</line>
+    </part>
+    <part name="Talking Fish" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>That cloud looks kinda big!</line>
+    </part>
+  </card>
+  <card name="American Elf" img="05.png" budget="4">
+    <scene number="12">
+      Rupert's companion Marty disappears in a freak tornado.
+      Rupert enlists the aid of the Sidekick Friends network.
+    </scene>
+    <part name="Hollering Dork" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Over here, mister!</line>
+    </part>
+    <part name="Drunk Farmer" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Git outta me barn, I ain't seen no Morty!</line>
+    </part>
+    <part name="Meek Little Sarah" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>He's so cute!</line>
+    </part>
+  </card>
+  <card name="DONKEY KONG LIVES" img="06.png" budget="6">
+    <scene number="14">
+      After his apparent death, Donkey Kong is saved by modern magic and meets mankind's newest discovery, a washing machine.
+    </scene>
+    <part name="Squealing Pig" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>REEEEEEEEEEEEEEE!</line>
+    </part>
+    <part name="Hunter Henry" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Fire at will!</line>
+    </part>
+    <part name="Sleeping Beauty" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>He's over there!</line>
+    </part>
+  </card>
+  <card name="The Slob." img="07.png" budget="4">
+    <scene number="31">
+      An ogre sits at home all day doing just about nothing.
+      We don't know why we filmed it but here it is I guess.
+      - Guillermo del Toro
+    </scene>
+    <part name="Innocent Slug" level="4">
+      <area x="53" y="47" h="40" w="40" />
+      <line>NOT THE SALT-AHHH!</line>
+    </part>
+    <part name="The Slob" level="6">
+      <area x="115" y="47" h="40" w="40" />
+      <line>~SOMEBODY ONCE TOLD ME~!</line>
+    </part>
+  </card>
+  <card name="Leprechaun 9" img="08.png" budget="4">
+    <scene number="34">
+      An ansty elf pretends to be the Leprechaun until the real one shows up.
+      A Netflix adaptation.
+    </scene>
+    <part name="Village Idiot" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Yup that'll do it.</line>
+    </part>
+    <part name="Dectective Fox" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Indubitably.</line>
+    </part>
+    <part name="Leprechaun" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>ME POT OF GOLD IS SOILED!</line>
+    </part>
+  </card>
+  <card name="The GingerDEAD Man" img="09.png" budget="3">
+    <scene number="24">
+      Evil never tasted so good!
+    </scene>
+    <part name="Angry Baker" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Not the butter!</line>
+    </part>
+    <part name="Woman with Knife" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Keep that thing away from me!</line>
+    </part>
+    <part name="Man in Milk" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>It burns! But it tastes great!</line>
+    </part>
+  </card>
+  <card name="Cave Dwellers" img="10.png" budget="4">
+    <scene number="14">
+      A documentary on the lifestyle of the local Cyclops community.
+      Banned in 10 kingdoms for its controversial footage.
+    </scene>
+    <part name="Sleeping Cyclops" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Snnkkk snnkk snnkk.</line>
+    </part>
+    <part name="Cyclops with Pig" level="2">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Hullo!</line>
+    </part>
+    <part name="Disguised person" level="4">
+      <area x="145" y="47" h="40" w="40" />
+      <line>I'm totally a cyclops.</line>
+    </part>
+  </card>
+  <card name="The Robbers of Beans" img="11.png" budget="4">
+    <scene number="19">
+      Puss in Boots confronts the toughest thug in his gang, Fuzzy Wuzzy, in an
+      abbreviated cat fight. Puss settles the dispute with fearless guile
+      and a kick in the family jewels. Fuzzy Wuzzy wasn't so fuzzy was he?
+    </scene>
+    <part name="Buster" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>One two three go!</line>
+    </part>
+    <part name="Cat in distance" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Ooooo!</line>
+    </part>
+    <part name="Fat Pete" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Nick kick, boss!</line>
+    </part>
+    <part name="Fuzzy Wuzzy" level="6">
+      <area x="163" y="47" h="40" w="40" />
+      <line>OOF!</line>
+    </part>
+  </card>
+  <card name="Beyond the Tail: Life without Balence" img="12.png" budget="2">
+    <scene number="12">
+      Puss discovers for the first time that his ability to do cartwheels has
+      disappeared along with his tail.  Other cowboys attempt to console him. 
+    </scene>
+    <part name="Kitty Softpaws" level="6">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Have you tried a prosthetic?</line>
+    </part>
+  </card>
+  <card name="An Ogre Called 'Cow'" img="13.png" budget="3">
+    <scene number="16">
+      Nothing will settle the debates among the skeptical locals, short of a
+      demonstration of Roy's special talents.
+    </scene>
+    <part name="Preacher" level="3">
+      <area x="53" y="47" h="40" w="40" />
+      <line>Be gone demon!</line>
+    </part>
+    <part name="Amused Witness" level="6">
+      <area x="115" y="47" h="40" w="40" />
+      <line>Am I in the splash zone?</line>
+    </part>
+  </card>
+  <card name="Far Far Away Idol Commercial" img="14.png" budget="2">
+    <scene number="2">
+      Simon Cowell encourages all to watch the Far Far Away Idol show, because apparently T.V. still matters in a fantasy world.
+    </scene>
+    <part name="Curious girl" level="3">
+      <area x="53" y="47" h="40" w="40" />
+      <line>Can I be on T.V.?</line>
+    </part>
+    <part name="Simon Cowell" level="4">
+      <area x="115" y="47" h="40" w="40" />
+      <line>If you've got a big mouth and you're controversial, you're going to get attention!</line>
+    </part>
+  </card>
+  <card name="Potions Commercial" img="15.png" budget="2">
+    <scene number="3">
+      The Fairy Godmother demonstrates the effects of her latest potion; stress-b-gone. 
+      Unfortunately the test subject disappeared in thin air.
+    </scene>
+    <part name="Surprised Boom Operator" level="2">
+      <area x="53" y="47" h="40" w="40" />
+      <line>Should we cut that?</line>
+    </part>
+    <part name="Fairy Godmother" level="4">
+      <area x="115" y="47" h="40" w="40" />
+      <line>Ta daaaa!</line>
+    </part>
+  </card>
+  <card name="Fiona: Princess of Action" img="16.png" budget="5">
+    <scene number="8">
+      Fiona embarks on a journy to reclaim one of her families secret fried chicken recipies.
+      Shrek's nerves get the better of him when the bucket of chicken speaks about Bernie Sanders.
+    </scene>
+    <part name="Kicked in Face" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Arrrggh! *Spielberg wants you to actually get kicked in the face for this role*</line>
+    </part>
+    <part name="Shot in Leg" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>It's stuck!</line>
+    </part>
+    <part name="Leaps into Chicken Den" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>These aren't my glasses!</line>
+    </part>
+  </card>
+  <card name="Hell Comes to Elftown" img="17.png" budget="5">
+    <scene number="6">
+      After the trapeze indident, the traveling circus takes time out to get drunk
+      and start a brawl.
+    </scene>
+    <part name="Small Elf" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Is that rock getting bigger?</line>
+    </part>
+    <part name="Circus Preformer" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>LEMME AT EM'!</line>
+    </part>
+    <part name="Falls on TNT" level="4">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Talk about explosive!</line>
+    </part>
+  </card>
+  <card name="Shrekespear in Lubbock" img="18.png" budget="3">
+    <scene number="23">
+      Shrek decides that it is time to be movin' on.  Fiona convinces him to
+      stick around just long enough to get into big trouble.
+    </scene>
+    <part name="Rabid Rabbit" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>*HISS*</line>
+    </part>
+    <part name="Laughing Woman" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>You call that a stead?</line>
+    </part>
+    <part name="Man with Torch" level="4">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Back! Back you beast!</line>
+    </part>
+  </card>
+  <card name="Shrinking Ogre!" img="19.png" budget="3">
+    <scene number="30">
+      Shrek and Donkey mix the wrong potion and end up 100 times smaller.
+      Stuck inside of the castle, they have to find a way to grow back.
+    </scene>
+    <part name="Sketchy Rat" level="4">
+      <area x="53" y="47" h="40" w="40" />
+      <line>I'll show you's the cheese, hehehe.</line>
+    </part>
+    <part name="Man with Onion" level="6">
+      <area x="115" y="47" h="40" w="40" />
+      <line>Fresh Onions!</line>
+    </part>
+  </card>
+  <card name="Troll 4: Three was not enough" img="20.png" budget="5">
+    <scene number="15">
+      An enchanted onion husk discovers his long-lost sister Marcie, and instructs her in the ways
+      of surviving the troll invasion.
+    </scene>
+    <part name="Staggering Man" level="3">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Ah they got me!</line>
+    </part>
+    <part name="Woman with Axe" level="5">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Howdy, strangers!</line>
+    </part>
+    <part name="Marcie" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Welcome home!</line>
+    </part>
+  </card>
+  <card name="Witch Cop?" img="21.png" budget="6">
+    <scene number="25">
+      A song and dance extravaganza, "A Broomstick Banger." - Simon Cowell
+    </scene>
+    <part name="Looks like Elvis" level="4">
+      <area x="20" y="47" h="40" w="40" />
+      <line>MERCY!</line>
+    </part>
+    <part name="Less Wicked Witch" level="5">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Maybe.</line>
+    </part>
+    <part name="Wicked Witch" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Maybe not.</line>
+    </part>
+  </card>
+  <card name="Humor at the Expense of Onions" img="22.png" budget="5">
+    <scene number="16">
+      Humpty and his cohort of unfeeling smart-mouths make fun of Shrek and his
+      great cart of onions.
+    </scene>
+    <part name="Knight" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>You there!</line>
+    </part>
+    <part name="Headless horseman" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Be not afraid!</line>
+    </part>
+    <part name="Drops onions" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Oops!</line>
+    </part>
+  </card>
+  <card name="The Search for Donkey" img="23.png" budget="6">
+    <scene number="12">
+      Alone in the wilderness, Donkey makes the best of his situation. In what
+      seems like no time at all, he constructs a sturdy two-story house from
+      branches and mud... with his own hooves.
+    </scene>
+    <part name="Film Critic" level="5">
+      <area x="53" y="47" h="40" w="40" />
+      <line>Implausible!</line>
+    </part>
+    <part name="Hobo with Bulldozer" level="6">
+      <area x="115" y="47" h="40" w="40" />
+      <line>Nice house! Shame if somebody bulldozed it.</line>
+    </part>
+  </card>
+    <card name="Enchanted Onion Sauce Commercial" img="24.png" budget="2">
+    <scene number="1">
+      A dozen grizzled elves surround a fire. Suddenly, they exclaim, "That's
+      not garlic!"
+    </scene>
+    <part name="Secret Vampire" level="3">
+      <area x="53" y="47" h="40" w="40" />
+      <line>Ack-Blah-ERHG.</line>
+    </part>
+    <part name="Dog" level="6">
+      <area x="115" y="47" h="40" w="40" />
+      <line>*Begins to gnaw on vampire*</line>
+    </part>
+  </card>
+  <card name="The Donkey Hunter" img="25.png" budget="5">
+    <scene number="14">
+      An in-depth examination of the ways in which the kingdom of Far Far Aways War impacts
+       and disrupts the lives of people in a small magical town in the swamp.
+    </scene>
+    <part name="Thrown in Cage" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>I'm not magical I swear!</line>
+    </part>
+    <part name="Cake with Legs" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>This is sweet!</line>
+    </part>
+    <part name="Kicked in Head" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>I'm seeing tripledouble.</line>
+    </part>
+  </card>
+  <card name="One False Step for Ogrekind" img="26.png" budget="6">
+    <scene number="21">
+      After a dozen failed attempts, one rocket carries Shrek and his three
+      children to the Moon, where they enjoy a picnic and a spirited game of
+      badminton.
+    </scene>
+    <part name="Flustered Elf" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Well, I never!</line>
+    </part>
+    <part name="Space Monkey" level="2">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Ooh ooh ahh ahh!</line>
+    </part>
+    <part name="Hal" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>I'm sorry Shrek, I'm afraid I can't do that."</line>
+    </part>
+  </card>
+  <card name="The Magnificent Sven" img="27.png" budget="5">
+    <scene number="15">
+      Sven is a gifted swordfighter, eager to take on the kingdoms finest warriors. 
+      Then he discovers one fatal flaw; he's blind.
+    </scene>
+    <part name="Man in Poncho" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Howdy, Sven!</line>
+    </part>
+    <part name="Ecstatic Housewife" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>He's what?!</line>
+    </part>
+    <part name="Lord Farquaad" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>I challenge you!</line>
+    </part>
+  </card>
+  <card name="How They Get Onions" img="28.png" budget="4">
+    <scene number="2">
+      Josie asks Shrek how they get onions. After a thoughtful pause, he
+      begins. "Not like you'd expect!"
+    </scene>
+    <part name="Onion" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>...</line>
+    </part>
+    <part name="Onion Farmer" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>This one ain't even that big!</line>
+    </part>
+    <part name="Josie" level="4">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Zoinks!</line>
+    </part>
+  </card>
+    <card name="12 Angry Ogres" img="29.png" budget="5">
+    <scene number="27">
+      Following the closing arguments in a murder trial, 
+      the 12 members of the jury must deliberate, 
+      with a guilty verdict meaning death for the accused, an inner-city elf.
+    </scene>
+    <part name="Juror 1" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>He didn't have hands?</line>
+    </part>
+    <part name="Juror 2" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>He's guilty!</line>
+    </part>
+    <part name="Judge" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Contempt of court!</line>
+    </part>
+  </card>
+  <card name="Ghostbusters" img="30.png" budget="4">
+    <scene number="12">
+      In an absurd dream sequence, Crockett recalls an episode of fear and chaos
+      in which his childhood friend Timmy was trapped at the bottom of a well.
+    </scene>
+    <part name="Mayor" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>No such thing!</line>
+    </part>
+    <part name="Librarian" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Shhh!</line>
+    </part>
+    <part name="Dr.Venkman" level="4">
+      <area x="145" y="47" h="40" w="40" />
+      <line>I ain't afraid of no ghosts!</line>
+    </part>
+  </card>
+  <card name="Shrekback Mountain" img="31.png" budget="4">
+    <scene number="25">
+      The story of a forbidden and secretive relationship between two Ogres, and their lives over the years.
+    </scene>
+    <part name="Dennis" level="5">
+      <area x="53" y="47" h="40" w="40" />
+      <line>Jack, I swear...!</line>
+    </part>
+    <part name="Jack" level="6">
+      <area x="115" y="47" h="40" w="40" />
+      <line>Hold it right there!</line>
+    </part>
+  </card>
+  <card name="Young Frankenshrek" img="32.png" budget="6">
+    <scene number="19">
+      An enchanted grandson of the infamous scientist,
+      struggling to prove that his grandfather was not as insane as people believe,
+      is invited to Far Far Away, where he discovers the process that reanimates a dead body.
+    </scene>
+    <part name="Sadistic Jailor" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Is that a jelly donut?</line>
+    </part>
+    <part name="Sober Physician" level="3">
+      <area x="83" y="47" h="40" w="40" />
+      <line>This is the part where you run away screaming!</line>
+    </part>
+    <part name="Igor" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Mm-yes master!</line>
+    </part>
+  </card>
+  <card name="Gladiator" img="33.png" budget="6">
+    <scene number="35">
+      Hector makes a surprising discovery behind the Chinese grocery store.
+    </scene>
+    <part name="Lucilla" level="3">
+      <area x="20" y="47" h="40" w="40" />
+      <line>He'll come back.</line>
+    </part>
+    <part name="Marcus Aurelius" level="5">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Are you sure?</line>
+    </part>
+    <part name="Maximus" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Are you not entertained?</line>
+    </part>
+  </card>
+  <card name="Taxi Driver" img="34.png" budget="4">
+    <scene number="5">
+      A mentally unstable ex-knight works as a nighttime taxi driver in Far Far Away,
+      where the perceived decadence and sleaze fuels his urge for violent action by
+      attempting to liberate a castle worker and an onion farmer.
+    </scene>
+    <part name="Crossing Street" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Hey I'm walkin here!</line>
+    </part>
+    <part name="Wizard" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Skidaddle skidoodle, you're onion is now a poodle!</line>
+    </part>
+    <part name="Taxi Driver" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>You talkin' to me?</line>
+    </part>
+  </card>
+  <card name="Fight Club" img="35.png" budget="5">
+    <scene number="9">
+      An insomniac factory worker and a devil-may-care potion maker form an
+      underground fight club that evolves into something much, much more.
+    </scene>
+    <part name="Detective" level="3">
+      <area x="20" y="47" h="40" w="40" />
+      <line>I have a hunch.</line>
+    </part>
+    <part name="File Clerk" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>I love my job I swear!</line>
+    </part>
+    <part name="Tyler Durden" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>The things you own end up owning you.</line>
+    </part>
+  </card>
+  <card name="Onion Runner" img="36.png" budget="4">
+    <scene number="13">
+      An onion runner must pursue and terminate four enchanted onions who stole a carriage in the fields, 
+      and have returned to Far Far Away to find their creator.
+    </scene>
+    <part name="Man with Chain" level="1">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Look out below!</line>
+    </part>
+    <part name="Rachael" level="2">
+      <area x="83" y="47" h="40" w="40" />
+      <line>Says who?</line>
+    </part>
+    <part name="Accidental Victim" level="5">
+      <area x="145" y="47" h="40" w="40" />
+      <line>Ow! My spine!</line>
+    </part>
+  </card>
+  <card name="The Godmother" img="37.png" budget="5">
+    <scene number="17">
+      The aging patriarch of an organized crime dynasty transfers control of her clandestine empire to her reluctant son.
+    </scene>
+    <part name="Stoic Man" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>...</line>
+    </part>
+    <part name="Prince Charming" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>But I don't wanna.</line>
+    </part>
+    <part name="Godmother" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>You will!</line>
+    </part>
+  </card>
+  <card name="How They Get Onions" img="38.png" budget="4">
+    <scene number="8">
+      Josie is thoroughly off onions at this point. Shrek shows her one more
+      way that she might not have heard of before.
+    </scene>
+    <part name="Marksman" level="4">
+      <area x="20" y="47" h="40" w="40" />
+      <line>Pull!</line>
+    </part>
+    <part name="Spotter" level="5">
+      <area x="83" y="47" h="40" w="40" />
+      <line>A little to the left!</line>
+    </part>
+    <part name="A Horse" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>No Sir, I don't like it!</line>
+    </part>
+  </card>
+  <card name="Shrek-E" img="39.png" budget="3">
+    <scene number="19">
+      In the distant future, a small waste-collecting cyborg-ogre inadvertently embarks on a space journey that will ultimately decide the fate of ogrekind.
+    </scene>
+    <part name="Talking Pizza" level="2">
+      <area x="53" y="47" h="40" w="40" />
+      <line>I'm too young to die!</line>
+    </part>
+    <part name="The Last Tree" level="6">
+      <area x="115" y="47" h="40" w="40" />
+      <line>No!</line>
+    </part>
+  </card>
+  <card name="Shrek's Final Frontier" img="40.png" budget="5">
+    <scene number="40">
+      Shrek and the gang embark on a mystical journey to find the author of Shrek; William Steig.
+    </scene>
+    <part name="Pinocchio" level="2">
+      <area x="20" y="47" h="40" w="40" />
+      <line>My nose will now grow!</line>
+    </part>
+    <part name="Exploding Horse" level="4">
+      <area x="83" y="47" h="40" w="40" />
+      <line>BOOOOOOOOOOOOM *EEEEEEEEEEEEEEEEEEEEEEEEEE*!</line>
+    </part>
+    <part name="Fourth Wall" level="6">
+      <area x="145" y="47" h="40" w="40" />
+      <line>*Breaks*"</line>
+    </part>
+  </card>
+</cards>

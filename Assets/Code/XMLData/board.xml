@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<board name="default">
+  <set name="Dragon's Lair">
+    <neighbors>
+      <neighbor name="Jail Tower" />
+      <neighbor name="Muffin Man" />
+      <neighbor name="Castle" />
+    </neighbors>
+    <area x="21" y="69" h="115" w="205" />
+    <takes>
+      <take number="3"><area x="36" y="11" h="47" w="47" /></take>
+      <take number="2"><area x="89" y="11" h="47" w="47" /></take>
+      <take number="1"><area x="141" y="11" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Skeleton" level="1">
+        <area x="114" y="227" h="46" w="46" />
+        <line>~rattle~rattle~</line>
+      </part>
+      <part name="Chained Corpse" level="1">
+        <area x="51" y="268" h="46" w="46" />
+        <line>Ugh.</line>
+      </part>
+      <part name="Chatty Prisoner" level="2">
+        <area x="114" y="320" h="46" w="46" />
+        <line>This place isn't so bad! I love it here, we get a square meal a day, free heating, free entertainment! Why would you want to leave? Isn't it nice here?</line>
+      </part>
+      <part name="Dragon" level="4">
+        <area x="49" y="356" h="46" w="46" />
+        <line>Rawr!</line>
+      </part>
+    </parts>
+  </set>
+  <set name="Onion Fields">
+    <neighbors>
+      <neighbor name="The Factory" />
+      <neighbor name="The Old Oak" />
+      <neighbor name="Castle" />
+    </neighbors>
+    <area x="27" y="732" h="115" w="205" />
+    <takes>
+      <take number="3"><area x="244" y="764" h="47" w="47" /></take>
+      <take number="2"><area x="299" y="764" h="47" w="47" /></take>
+      <take number="1"><area x="354" y="764" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Scarecrow" level="1">
+        <area x="435" y="719" h="46" w="46" />
+        <line>...</line>
+      </part>
+      <part name="Freaky Farmer" level="2">
+        <area x="521" y="719" h="46" w="46" />
+        <line>Whaddya mean I can't sniff bike seats?</line>
+      </part>
+      <part name="Talking Horse" level="3">
+        <area x="435" y="808" h="46" w="46" />
+        <line>I'M GONNA HEADBUTTCHA,IM GONNA HEADBUTTHCA!</line>
+      </part>
+      <part name="Owner of Talking Horse" level="4">
+        <area x="521" y="808" h="46" w="46" />
+        <line>WE'RE GOING TO THE GLUE FACTORY</line>
+      </part>
+    </parts>
+  </set>
+  <set name="The Factory">
+    <neighbors>
+      <neighbor name="Onion Fields" />
+      <neighbor name="The Poison Apple" />
+      <neighbor name="Village" />
+    </neighbors>
+    <area x="623" y="734" h="115" w="205" />
+    <takes>
+      <take number="2"><area x="623" y="675" h="47" w="47" /></take>
+      <take number="1"><area x="682" y="675" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Dead Elf" level="1">
+        <area x="857" y="730" h="46" w="46" />
+        <line>...</line>
+      </part>
+      <part name="Snickering Human" level="2">
+        <area x="858" y="809" h="46" w="46" />
+        <line>Around elves, watch yourselves!</line>
+      </part>
+    </parts>
+  </set>
+  <set name="Village">
+    <neighbors>
+      <neighbor name="Swamp" />
+      <neighbor name="The Poison Apple" />
+      <neighbor name="The Factory" />
+    </neighbors>
+    <area x="969" y="740" h="115" w="205" />
+    <takes>
+      <take number="3"><area x="1005" y="683" h="47" w="47" /></take>
+      <take number="2"><area x="1058" y="683" h="47" w="47" /></take>
+      <take number="1"><area x="1111" y="683" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Snoring Drunkard" level="1">
+        <area x="1111" y="469" h="46" w="46" />
+        <line>Snaaaaaauughhh!</line>
+      </part>
+      <part name="Mandolin Player" level="1">
+        <area x="1044" y="509" h="46" w="46" />
+        <line>Shall I play a song?</line>
+      </part>
+      <part name="Angry Shop Keeper" level="2">
+        <area x="1111" y="557" h="46" w="46" />
+        <line>MY CABBAGES!</line>
+      </part>
+      <part name="Knight" level="3">
+        <area x="1046" y="596" h="46" w="46" />
+        <line>STOP, YOU HAVE VIOLATED THE LAW.</line>
+      </part>
+    </parts>
+  </set>
+  <set name="The Strip">
+    <neighbors>
+      <neighbor name="Swamp" />
+      <neighbor name="Jail Tower" />
+      <neighbor name="Cyclops Cavern" />
+    </neighbors>
+    <area x="969" y="28" h="115" w="205" />
+    <takes>
+      <take number="3"><area x="912" y="23" h="47" w="47" /></take>
+      <take number="2"><area x="858" y="23" h="47" w="47" /></take>
+      <take number="1"><area x="804" y="23" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Beggar" level="1">
+        <area x="637" y="22" h="46" w="46" />
+        <line>Spare change?</line>
+      </part>
+      <part name="Pixie" level="2">
+        <area x="720" y="22" h="46" w="46" />
+        <line>Whaddya lookin at?</line>
+      </part>
+      <part name="Enchanted Broom" level="2">
+        <area x="637" y="105" h="46" w="46" />
+        <line>HEY I'M WALKIN' HERE!</line>
+      </part>
+      <part name="Lord Farquaad" level="4">
+        <area x="720" y="105" h="46" w="46" />
+        <line>People of Far Far Away!</line>
+      </part>
+    </parts>
+  </set>
+  <set name="Jail Tower">
+    <neighbors>
+      <neighbor name="The Strip" />
+      <neighbor name="Muffin Man" />
+      <neighbor name="Dragon Lair" />
+    </neighbors>
+    <area x="281" y="27" h="115" w="205" />
+    <takes>
+      <take number="1"><area x="442" y="156" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Gaurd" level="2">
+        <area x="519" y="25" h="46" w="46" />
+        <line>No food for a week!</line>
+      </part>
+      <part name="Unhinged Cyclops" level="3">
+        <area x="519" y="105" h="46" w="46" />
+        <line>AH MY EYE!</line>
+      </part>
+    </parts>
+  </set>
+  <set name="Muffin Man">
+    <neighbors>
+      <neighbor name="The Old Oak" />
+      <neighbor name="Dragon's Lair" />
+      <neighbor name="Jail Tower" />
+      <neighbor name="Cyclops Cavern" />
+    </neighbors>
+    <area x="370" y="282" h="115" w="205" />
+    <takes>
+      <take number="2"><area x="313" y="277" h="47" w="47" /></take>
+      <take number="1"><area x="313" y="330" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Flour Bag" level="1">
+        <area x="236" y="276" h="46" w="46" />
+        <line>~poof~</line>
+      </part>
+      <part name="The Muffin Man" level="3">
+        <area x="236" y="358" h="46" w="46" />
+        <line>Do you know me?</line>
+      </part>
+    </parts>
+  </set>
+  <set name="The Old Oak">
+    <neighbors>
+      <neighbor name="Castle" />
+      <neighbor name="Muffin Man" />
+      <neighbor name="Onion Fields" />
+      <neighbor name="The Poison Apple" />
+    </neighbors>
+    <area x="252" y="478" h="115" w="205" />
+    <takes>
+      <take number="2"><area x="472" y="473" h="47" w="47" /></take>
+      <take number="1"><area x="525" y="473" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="A leaf" level="1">
+        <area x="412" y="608" h="46" w="46" />
+        <line>A leaf? Are you kidding me?</line>
+      </part>
+      <part name="Merchant" level="2">
+        <area x="488" y="608" h="46" w="46" />
+        <line>Look at my wares!</line>
+      </part>
+      <part name="Talking Tree" level="3">
+        <area x="488" y="525" h="46" w="46" />
+        <line>WATER I NEED WATER!</line>
+      </part>
+    </parts>
+  </set>
+  <set name="The Poison Apple">
+    <neighbors>
+      <neighbor name="Cyclops Cavern" />
+      <neighbor name="The Factory" />
+      <neighbor name="The Old Oak" />
+      <neighbor name="Village" />
+    </neighbors>
+    <area x="623" y="475" h="115" w="205" />
+    <takes>
+      <take number="1"><area x="840" y="549" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Bar Frog" level="2">
+        <area x="911" y="554" h="46" w="46" />
+        <line>RIBBIT.</line>
+      </part>
+      <part name="Ugly Stepsister" level="3">
+        <area x="911" y="470" h="46" w="46" />
+        <line>*Breaks bottle to use as a shiv*</line>
+      </part>
+    </parts>
+  </set>
+  <set name="Cyclops Cavern">
+    <neighbors>
+      <neighbor name="The Strip" />
+      <neighbor name="Muffin Man" />
+      <neighbor name="The Poison Apple" />
+      <neighbor name="Swamp" />
+    </neighbors>
+    <area x="632" y="280" h="115" w="205" />
+    <takes>
+      <take number="2"><area x="626" y="216" h="47" w="47" /></take>
+      <take number="1"><area x="679" y="216" h="47" w="47" /></take>
+    </takes>
+    <parts>
+      <part name="Kid Cyclops" level="1">
+        <area x="877" y="352" h="46" w="46" />
+        <line>I don't know you!</line>
+      </part>
+      <part name="Father Cyclops" level="2">
+        <area x="877" y="276" h="46" w="46" />
+        <line>Don't talk to me or my son again!</line>
+      </part>
+    </parts>
+  </set>
+  <Swamp>
+    <neighbors>
+      <neighbor name="The Strip" />
+      <neighbor name="Cyclops Cavern" />
+      <neighbor name="Village" />
+    </neighbors>
+    <area x="991" y="248" h="194" w="201" />
+  </Swamp>
+  <Castle>
+    <neighbors>
+      <neighbor name="Dragon's Lair" />
+      <neighbor name="The Old Oak" />
+      <neighbor name="Onion Fields" />
+    </neighbors>
+    <area x="9" y="459" h="208" w="209" />
+    <upgrades>
+      <upgrade level="2" currency="dollar" amt="4" >
+        <area x="98" y="542" h="19" w="19" />
+      </upgrade>
+      <upgrade level="3" currency="dollar" amt="10">
+        <area x="98" y="564" h="19" w="19" />
+      </upgrade>
+      <upgrade level="4" currency="dollar" amt="18">
+        <area x="98" y="587" h="19" w="19" />
+      </upgrade>
+      <upgrade level="5" currency="dollar" amt="28">
+        <area x="98" y="609" h="19" w="19" />
+      </upgrade>
+      <upgrade level="6" currency="dollar" amt="40">
+        <area x="98" y="631" h="19" w="19" />
+      </upgrade>
+      <upgrade level="2" currency="credit" amt="5" >
+        <area x="147" y="542" h="19" w="19" />
+      </upgrade>
+      <upgrade level="3" currency="credit" amt="10">
+        <area x="147" y="564" h="19" w="19" />
+      </upgrade>
+      <upgrade level="4" currency="credit" amt="15">
+        <area x="147" y="587" h="19" w="19" />
+      </upgrade>
+      <upgrade level="5" currency="credit" amt="20">
+        <area x="147" y="609" h="19" w="19" />
+      </upgrade>
+      <upgrade level="6" currency="credit" amt="25">
+        <area x="147" y="631" h="19" w="19" />
+      </upgrade>
+    </upgrades>
+  </Castle>
+</board>
