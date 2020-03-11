@@ -14,14 +14,13 @@ namespace DeadWood
             GAMEINPROGRESS
         };
 
-        public static Controller cont;
+        public static Controller cont = new Controller();
         public PROGRAMSTATE state;
         private GameState gameState;
 
-        public Controller()
+        private Controller()
         {
             state = PROGRAMSTATE.PROGRAMSTARTUP;
-            cont = this;
         }
 
         public void ProgramStartup()
