@@ -1,41 +1,38 @@
 using System;
 using System.Collections.Generic;
 
-namespace DeadWood
+// Responsibilities: Abstract class that allows players to occupy their space
+public class SceneCard
 {
-    // Responsibilities: Abstract class that allows players to occupy their space
-    public class SceneCard
+    private string name;
+    public int budget;
+    public List<Role> roles;
+
+    public SceneCard(string inname, int inbudget, List<Role> inroles)
     {
-        private string name;
-        public int budget;
-        public List<Role> roles;
+        name = inname;
+        budget = inbudget;
+        roles = inroles;
+    }
 
-        public SceneCard(string inname, int inbudget, List<Role> inroles)
+    public override string ToString()
+    {
+        string s = name + ", " + budget;
+        for(int i = 0; i < roles.Count; i++)
         {
-            name = inname;
-            budget = inbudget;
-            roles = inroles;
+            s = s + " | " + roles[i].ToString();
         }
 
-        public override string ToString()
-        {
-            string s = name + ", " + budget;
-            for(int i = 0; i < roles.Count; i++)
-            {
-                s = s + " | " + roles[i].ToString();
-            }
+        return s;
+    }
 
-            return s;
-        }
+    public void SortRoles()
+    {
+        roles.Sort(CompareByRoleRank);
+    }
 
-        public void SortRoles()
-        {
-            roles.Sort(CompareByRoleRank);
-        }
-
-        private int CompareByRoleRank(Role one, Role two)
-        {
-            return one.rank - two.rank;
-        }
+    private int CompareByRoleRank(Role one, Role two)
+    {
+        return one.rank - two.rank;
     }
 }
