@@ -13,6 +13,11 @@ public class blink : MonoBehaviour
         StartCoroutine(Helper());
     }
 
+    public void KickStart()
+    {
+        StartCoroutine(Helper());
+    }
+
     IEnumerator Helper()
     {
         while (true)
