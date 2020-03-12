@@ -16,6 +16,7 @@ public class Controller
     public static Controller cont = new Controller();
     public PROGRAMSTATE state;
     private GameState gameState;
+    public static int amountOfPlayers = 2;
 
     private Controller()
     {
@@ -26,6 +27,7 @@ public class Controller
     {
         //view = View.GetInstance(this);
         int num = 2;//view.PromptGreeting();
+        num = amountOfPlayers;
         Player[] players = new Player[num];
         for (int i = 0; i < num; i++)
         {
