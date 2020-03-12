@@ -33,8 +33,8 @@
   </set>
   <set name="Onion Fields">
     <neighbors>
-      <neighbor name="The Factory" />
-      <neighbor name="The Old Oak" />
+      <neighbor name="Factory" />
+      <neighbor name="Old Oak" />
       <neighbor name="Castle" />
     </neighbors>
     <area x="27" y="732" h="115" w="205" />
@@ -62,10 +62,10 @@
       </part>
     </parts>
   </set>
-  <set name="The Factory">
+  <set name="Factory">
     <neighbors>
       <neighbor name="Onion Fields" />
-      <neighbor name="The Poison Apple" />
+      <neighbor name="Poison Apple" />
       <neighbor name="Village" />
     </neighbors>
     <area x="623" y="734" h="115" w="205" />
@@ -87,8 +87,8 @@
   <set name="Village">
     <neighbors>
       <neighbor name="Swamp" />
-      <neighbor name="The Poison Apple" />
-      <neighbor name="The Factory" />
+      <neighbor name="Poison Apple" />
+      <neighbor name="Factory" />
     </neighbors>
     <area x="969" y="740" h="115" w="205" />
     <takes>
@@ -115,7 +115,7 @@
       </part>
     </parts>
   </set>
-  <set name="The Strip">
+  <set name="Strip">
     <neighbors>
       <neighbor name="Swamp" />
       <neighbor name="Jail Tower" />
@@ -148,9 +148,9 @@
   </set>
   <set name="Jail Tower">
     <neighbors>
-      <neighbor name="The Strip" />
+      <neighbor name="Strip" />
       <neighbor name="Muffin Man" />
-      <neighbor name="Dragon Lair" />
+      <neighbor name="Dragon's Lair" />
     </neighbors>
     <area x="281" y="27" h="115" w="205" />
     <takes>
@@ -169,7 +169,7 @@
   </set>
   <set name="Muffin Man">
     <neighbors>
-      <neighbor name="The Old Oak" />
+      <neighbor name="Old Oak" />
       <neighbor name="Dragon's Lair" />
       <neighbor name="Jail Tower" />
       <neighbor name="Cyclops Cavern" />
@@ -184,18 +184,18 @@
         <area x="236" y="276" h="46" w="46" />
         <line>~poof~</line>
       </part>
-      <part name="The Muffin Man" level="3">
+      <part name="Muffin Man" level="3">
         <area x="236" y="358" h="46" w="46" />
         <line>Do you know me?</line>
       </part>
     </parts>
   </set>
-  <set name="The Old Oak">
+  <set name="Old Oak">
     <neighbors>
       <neighbor name="Castle" />
       <neighbor name="Muffin Man" />
       <neighbor name="Onion Fields" />
-      <neighbor name="The Poison Apple" />
+      <neighbor name="Poison Apple" />
     </neighbors>
     <area x="252" y="478" h="115" w="205" />
     <takes>
@@ -217,11 +217,11 @@
       </part>
     </parts>
   </set>
-  <set name="The Poison Apple">
+  <set name="Poison Apple">
     <neighbors>
       <neighbor name="Cyclops Cavern" />
-      <neighbor name="The Factory" />
-      <neighbor name="The Old Oak" />
+      <neighbor name="Factory" />
+      <neighbor name="Old Oak" />
       <neighbor name="Village" />
     </neighbors>
     <area x="623" y="475" h="115" w="205" />
@@ -241,9 +241,9 @@
   </set>
   <set name="Cyclops Cavern">
     <neighbors>
-      <neighbor name="The Strip" />
+      <neighbor name="Strip" />
       <neighbor name="Muffin Man" />
-      <neighbor name="The Poison Apple" />
+      <neighbor name="Poison Apple" />
       <neighbor name="Swamp" />
     </neighbors>
     <area x="632" y="280" h="115" w="205" />
@@ -264,7 +264,7 @@
   </set>
   <Swamp>
     <neighbors>
-      <neighbor name="The Strip" />
+      <neighbor name="Strip" />
       <neighbor name="Cyclops Cavern" />
       <neighbor name="Village" />
     </neighbors>
@@ -273,7 +273,7 @@
   <Castle>
     <neighbors>
       <neighbor name="Dragon's Lair" />
-      <neighbor name="The Old Oak" />
+      <neighbor name="Old Oak" />
       <neighbor name="Onion Fields" />
     </neighbors>
     <area x="9" y="459" h="208" w="209" />
