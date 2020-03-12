@@ -1445,10 +1445,56 @@ PrefabInstance:
       propertyPath: m_Text
       value: Strip
       objectReference: {fileID: 0}
+    - target: {fileID: 3626425215560150715, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d28f75a8ebc252e488cf92e3e92607db,
+        type: 3}
     - target: {fileID: 2622069690190341525, guid: 82b0a71e95fe6244a9137519e1510215,
         type: 3}
       propertyPath: locationName
       value: Strip
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090450273832271165, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 346.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4090450273832271165, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -666.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052176733711052031, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 346.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5052176733711052031, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -601
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911632584959120473, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 301.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911632584959120473, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -670.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383271330922805109, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 303.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383271330922805109, guid: 82b0a71e95fe6244a9137519e1510215,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -599
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b0a71e95fe6244a9137519e1510215, type: 3}
