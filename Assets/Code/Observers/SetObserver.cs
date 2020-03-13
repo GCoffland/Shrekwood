@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SetObserver : Observer
+public class SetObserver : Observer, Selectable
 {
     [SerializeField]
     private Text titleText;
@@ -22,6 +22,9 @@ public class SetObserver : Observer
     [SerializeField]
     private Text shotCounters;
     private MovieSet movieSet;
+    private BoxCollider2D col;
+    private Vector2 topleft;
+    private Vector2 bottomright;
 
 
     // Start is called before the first frame update
@@ -38,12 +41,25 @@ public class SetObserver : Observer
         }
         assignSceneCardRoles();
         shotCounters.text = "" + movieSet.shotsRemaining;
+        col = GetComponent<BoxCollider2D>();
+        topleft = new Vector2(col.bounds.min.x, col.bounds.max.y);
+        bottomright = new Vector2(col.bounds.max.x, col.bounds.min.y);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void select(bool b)
+    {
+        Instantiate<GameObject>()
+    }
+
+    public void highlight(bool b)
+    {
+
     }
 
     void assignSceneCardRoles()
