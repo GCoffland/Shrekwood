@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 // Responsibilities: Play deadwood and have fun
 public class Player
@@ -91,7 +92,7 @@ public class Player
         Boolean status = false;
         int dollarsgained = 0;
         int creditsgained = 0;
-        Random ran = new Random();
+        System.Random ran = new System.Random();
         if(currentRole == null)
         {
             return null;

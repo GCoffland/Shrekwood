@@ -15,7 +15,7 @@ public class Controller
 
     public static Controller cont = new Controller();
     public PROGRAMSTATE state;
-    private GameState gameState;
+    public GameState gameState;
     public int amountOfPlayers = 2;
 
     private Controller()
@@ -26,7 +26,6 @@ public class Controller
     public void ProgramStartup()
     {
         int num = amountOfPlayers;
-        num = amountOfPlayers;
         Player[] players = new Player[num];
         for (int i = 0; i < num; i++)
         {
@@ -63,13 +62,12 @@ public class Controller
 
     public void GameStartUp()
     {
-        //view.PromptBoardStartUp(gameState.numOfPlayers);
         gameState.locations.AddRange(XMLLoader.LoadSets());
         gameState.locations.Add(Trailer.GetInstance(XMLLoader.LoadTrailerNeighbors()));
         gameState.locations.Add(CastingOffice.GetInstance(XMLLoader.LoadUpgrades(), XMLLoader.LoadOfficeNeighbors()));
         gameState.randomizeLocations();
         gameState.resetPlayerLocations();
-        //view.StartDayDisplay(gameState.currentDay, gameState.numOfDays);
+        //view.StartDayDisplay(gameState.currentDay, gameState.numOfDays);  
     }
 
     public void GameUpdate()
@@ -208,6 +206,19 @@ public class Controller
 
     }
 
+    public Player getPlayerByNumber(int num)
+    {
+        Player curr = gameState.currentPlayer;
+        for(int i = 0; i < gameState.numOfPlayers; i++)
+        {
+            if(curr.playerName == "Player" + num)
+            {
+                return curr;
+            }
+            curr = curr.nextPlayer;
+        }
+        return null;
+    }
     public HashSet<string> GetPlayerActions()
     {
         return gameState.currentPlayer.GetPlayerActions();
