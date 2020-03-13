@@ -189,10 +189,6 @@
       <area x="145" y="47" h="40" w="40" />
       <line>Nick kick, boss!</line>
     </part>
-    <part name="Fuzzy Wuzzy" level="6">
-      <area x="163" y="47" h="40" w="40" />
-      <line>OOF!</line>
-    </part>
   </card>
   <card name="Beyond the Tail: Life without Balence" img="12.png" budget="2">
     <scene number="12">
@@ -381,7 +377,7 @@
       <line>Nice house! Shame if somebody bulldozed it.</line>
     </part>
   </card>
-    <card name="Enchanted Onion Sauce Commercial" img="24.png" budget="2">
+  <card name="Enchanted Onion Sauce Commercial" img="24.png" budget="2">
     <scene number="1">
       A dozen grizzled elves surround a fire. Suddenly, they exclaim, "That's
       not garlic!"

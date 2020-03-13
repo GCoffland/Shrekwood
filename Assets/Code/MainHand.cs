@@ -78,7 +78,7 @@ public class MainHand : MonoBehaviour
             {
                 if(bDidWantToMoveOn)
                 {
-                    Controller.amountOfPlayers = counterVal;
+                    Controller.cont.amountOfPlayers = counterVal;
                     SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
                 }
                 bDidWantToMoveOn = true;
@@ -97,7 +97,6 @@ public class MainHand : MonoBehaviour
         PrePlayer.gameObject.SetActive(false);
         PostPlayer.gameObject.SetActive(true);
         counter.gameObject.SetActive(true);
-        counter.GetComponent<blink>().KickStart();
         secondStart.GetComponent<blink>().KickStart();
     }
 }
