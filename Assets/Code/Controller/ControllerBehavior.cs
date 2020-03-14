@@ -10,6 +10,7 @@ public class ControllerBehavior : MonoBehaviour
     public string currentPlayer;
     public string currentPlayerLocation;
     private bool focusingOnLocations = false;
+    private bool actuallyFocusingOnRoles = false;
 
     [SerializeField]
     private AudioClip ahh;
@@ -59,7 +60,10 @@ public class ControllerBehavior : MonoBehaviour
     [SerializeField]
     private Text CreditsText;
 
-    // Locations
+    [SerializeField]
+    private Text PlayerRole;
+
+    // Locations AND ROLES?
     [SerializeField]
     private GameObject locationHolder;
 
@@ -68,6 +72,9 @@ public class ControllerBehavior : MonoBehaviour
 
     [SerializeField]
     private GameObject prefabLocation;   //THIS ONE IS A PREFAB TO BE COPIED
+
+    [SerializeField]
+    private Text SecondMirrorText;
 
     private GameObject SelectedLocation;    //currently highlighted location
 
@@ -134,6 +141,7 @@ public class ControllerBehavior : MonoBehaviour
 
     void UpdateLocations()
     {
+        SecondMirrorText.text = "LOCATIONS";//REEE
         maximumLocation = 0;
         listOfLocations.Clear();
         List<string> locations = Controller.cont.GetPlayerAdjacentLocations();
@@ -151,6 +159,26 @@ public class ControllerBehavior : MonoBehaviour
 
     }
 
+    void UpdateRoles()
+    {
+        //Get roles
+        SecondMirrorText.text = "ROLES";
+        maximumLocation = 0;
+        listOfLocations.Clear();
+        HashSet<Tuple<String, int>> roles = Controller.cont.GetPlayerRoles();
+        float offset = 0;
+        foreach (Tuple<String, int> rol in roles)
+        {
+            // Create the new sample roles
+            maximumLocation++;
+            GameObject Temp = GameObject.Instantiate<GameObject>(prefabLocation, locationHolder.transform);
+            listOfLocations.Add(Temp);
+            string rolelevel = (rol.Item2).ToString();
+            Temp.GetComponent<Text>().text = rol.Item1 + " " + rolelevel;
+            Temp.GetComponent<Transform>().transform.position = dummyTransform.transform.position + new Vector3(0, offset, 0);
+            offset -= 20f;
+        }
+    }
     void DoCurrentOption()
     {
         List<string> incommand = new List<string>(); 
@@ -168,9 +196,13 @@ public class ControllerBehavior : MonoBehaviour
                 break;
             case 1:
                 Debug.Log("take role");
-                Debug.Log("reeeeeeeeeeeeeeeeeee");
                 incommand.Add("take role"); // Figure this out!!
-                Controller.cont.ProcessPlayerCommand(incommand);
+                UpdateRoles();
+                SelectedLocation = listOfLocations[0];
+                SelectLocation(0);
+                focusingOnLocations = true; //Dont let us touch the main menu
+                actuallyFocusingOnRoles = true;
+                //Controller.cont.ProcessPlayerCommand(incommand);  //dont do this yet
                 break;
             case 2:
                 Debug.Log("act");
@@ -202,6 +234,12 @@ public class ControllerBehavior : MonoBehaviour
     void UpdateActions()
     {
         //Disable all actions then enable the correct ones 
+        Move.fontStyle = FontStyle.Normal;
+        Role.fontStyle = FontStyle.Normal;
+        Act.fontStyle = FontStyle.Normal;
+        Rehearse.fontStyle = FontStyle.Normal;
+        Upgrade.fontStyle = FontStyle.Normal;
+        End.fontStyle = FontStyle.Normal;
         HashSet<string> actions = cont.GetPlayerActions();
         for (int i = 0; i < possibleactionsArray.Length; i++)
         {
@@ -247,6 +285,7 @@ public class ControllerBehavior : MonoBehaviour
         RankText.text = "Rank: " + (stats.Item2).ToString();
         DollarsText.text = "Dollars: " + (stats.Item3).ToString();
         CreditsText.text = "Credits: " + (stats.Item4).ToString();
+        PlayerRole.text = cont.getPlayerCurrentRole();
     }
 
     // Update is called once per frame
@@ -347,19 +386,42 @@ public class ControllerBehavior : MonoBehaviour
             }
             if (Input.GetButtonDown("Button_A"))
             {
-                List<string> incommand = new List<string>();
-                incommand.Add("move");
-                incommand.Add(listOfLocations[currentLocationOption].GetComponent<Text>().text);// Figure this out!!
-                Controller.cont.ProcessPlayerCommand(incommand);
-                currentLocationOption = 0;
-                audioSource.PlayOneShot(ahh, 1.0f);
-                focusingOnLocations = false;    //REPLACE WITH ENUM REEEEEEEEEEEEE
-                SelectedLocation.GetComponent<Text>().color = Color.white;
-                SelectedLocation.GetComponent<Outline>().effectColor = Color.black;
-                foreach(GameObject g in listOfLocations)
+                if(!actuallyFocusingOnRoles)
                 {
-                    Destroy(g);
+                    List<string> incommand = new List<string>();
+                    incommand.Add("move");
+                    incommand.Add(listOfLocations[currentLocationOption].GetComponent<Text>().text);// Figure this out!!
+                    Controller.cont.ProcessPlayerCommand(incommand);
+                    currentLocationOption = 0;
+                    audioSource.PlayOneShot(ahh, 1.0f);
+                    focusingOnLocations = false;    //REPLACE WITH ENUM REEEEEEEEEEEEE
+                    SelectedLocation.GetComponent<Text>().color = Color.white;
+                    SelectedLocation.GetComponent<Outline>().effectColor = Color.black;
+                    foreach (GameObject g in listOfLocations)
+                    {
+                        Destroy(g);
+                    }
                 }
+                else //on roles
+                {
+                    List<string> incommand = new List<string>();
+                    incommand.Add("take role");
+                    string t = listOfLocations[currentLocationOption].GetComponent<Text>().text;
+                    t = t.Substring(0, t.Length - 2);
+                    incommand.Add(t);// Figure this out!!
+                    Controller.cont.ProcessPlayerCommand(incommand);
+                    currentLocationOption = 0;
+                    audioSource.PlayOneShot(ahh, 1.0f);
+                    focusingOnLocations = false;    //REPLACE WITH ENUM REEEEEEEEEEEEE
+                    actuallyFocusingOnRoles = false;
+                    SelectedLocation.GetComponent<Text>().color = Color.white;
+                    SelectedLocation.GetComponent<Outline>().effectColor = Color.black;
+                    foreach (GameObject g in listOfLocations)
+                    {
+                        Destroy(g);
+                    }
+                }
+                
             }
         }
     }
