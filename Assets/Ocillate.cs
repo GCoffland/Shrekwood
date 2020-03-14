@@ -22,15 +22,29 @@ public class Ocillate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (invert)
+        if (play)
         {
-            Vector2.Lerp(origPos, downTarget, 0.1f);
+            iterator += 0.1f;
+            if (invert)
+            {
+                Vector2 temp = Vector2.Lerp(origPos + upTarget, origPos + downTarget, iterator);
+                if (temp.x >= (origPos + downTarget).x || temp.y <= (origPos + downTarget).y)
+                {
+                    invert = !invert;
+                    iterator = 0;
+                }
+                transform.position = temp;
+            }
+            else
+            {
+                Vector2 temp = Vector2.Lerp(origPos + downTarget, origPos + upTarget, iterator);
+                if (temp.x <= (origPos + upTarget).x || temp.y >= (origPos + upTarget).y)
+                {
+                    invert = !invert;
+                    iterator = 0;
+                }
+                transform.position = temp;
+            }
         }
-        else
-        {
-
-        }
-        
     }
 }
