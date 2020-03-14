@@ -67,6 +67,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2434081070860631053, guid: f2a225b3da73809408e7edfa60926a1e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434081070860631053, guid: f2a225b3da73809408e7edfa60926a1e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2434081070860631052, guid: f2a225b3da73809408e7edfa60926a1e,
         type: 3}
       propertyPath: playerNum
@@ -76,6 +86,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 355fc5da942d7fb4a9e7c28256d58475,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2a225b3da73809408e7edfa60926a1e, type: 3}
