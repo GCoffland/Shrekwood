@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum STATE { PLAY, PAUSE, INVISIBLE };
 public interface Selectable
 {
-    void select(bool);
-    void highlight(bool);
+    void select(STATE s);
 }
