@@ -22,10 +22,9 @@ public class SetObserver : Observer, Selectable
     [SerializeField]
     private Text shotCounters;
     private MovieSet movieSet;
-    private BoxCollider2D col;
-    private Vector2 topleft;
-    private Vector2 bottomright;
 
+    public GameObject botRightObject;
+    public GameObject topLeftObject;
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +40,6 @@ public class SetObserver : Observer, Selectable
         }
         assignSceneCardRoles();
         shotCounters.text = "" + movieSet.shotsRemaining;
-        col = GetComponent<BoxCollider2D>();
-        topleft = new Vector2(col.bounds.min.x, col.bounds.max.y);
-        bottomright = new Vector2(col.bounds.max.x, col.bounds.min.y);
     }
 
     // Update is called once per frame
@@ -52,14 +48,28 @@ public class SetObserver : Observer, Selectable
         
     }
 
-    public void select(bool b)
+    public void select(STATE s)
     {
-        //Instantiate<GameObject>();
-    }
-
-    public void highlight(bool b)
-    {
-
+        if (s == STATE.PLAY)
+        {
+            botRightObject.transform.position = new Vector3(botRightObject.transform.position.x, botRightObject.transform.position.y, 0);
+            topLeftObject.transform.position = new Vector3(topLeftObject.transform.position.x, topLeftObject.transform.position.y, 0);
+            botRightObject.GetComponent<Ocillate>().play = true;
+            topLeftObject.GetComponent<Ocillate>().play = true;
+        }
+        else if(s == STATE.PAUSE)
+        {
+            botRightObject.transform.position = new Vector3(botRightObject.transform.position.x, botRightObject.transform.position.y, 0);
+            topLeftObject.transform.position = new Vector3(topLeftObject.transform.position.x, topLeftObject.transform.position.y, 0);
+            botRightObject.GetComponent<Ocillate>().play = false;
+            topLeftObject.GetComponent<Ocillate>().play = false;
+        }else if(s == STATE.INVISIBLE)
+        {
+            botRightObject.transform.position = new Vector3(botRightObject.transform.position.x, botRightObject.transform.position.y, -10000);
+            topLeftObject.transform.position = new Vector3(topLeftObject.transform.position.x, topLeftObject.transform.position.y, -10000);
+            botRightObject.GetComponent<Ocillate>().play = false;
+            topLeftObject.GetComponent<Ocillate>().play = false;
+        }
     }
 
     void assignSceneCardRoles()
