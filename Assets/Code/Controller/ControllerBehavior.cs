@@ -102,25 +102,39 @@ public class ControllerBehavior : MonoBehaviour
 
     void DoCurrentOption()
     {
-        switch(actionLocation)
+        List<string> incommand = new List<string>(); 
+        switch (actionLocation)
         {
             case 0:
                 Debug.Log("move");
+                incommand.Add("move");// Figure this out!!
+                Controller.cont.ProcessPlayerCommand(incommand);
                 break;
             case 1:
                 Debug.Log("take role");
+                Debug.Log("reeeeeeeeeeeeeeeeeee");
+                incommand.Add("take role"); // Figure this out!!
+                Controller.cont.ProcessPlayerCommand(incommand);
                 break;
             case 2:
                 Debug.Log("act");
+                incommand.Add("act"); 
+                Controller.cont.ProcessPlayerCommand(incommand);
                 break;
             case 3:
                 Debug.Log("rehearse");
+                incommand.Add("rehearse");
+                Controller.cont.ProcessPlayerCommand(incommand);
                 break;
             case 4:
                 Debug.Log("upgrade");
+                incommand.Add("upgrade");
+                Controller.cont.ProcessPlayerCommand(incommand);
                 break;
             case 5:
                 Debug.Log("end turn");
+                incommand.Add("end turn");
+                Controller.cont.ProcessPlayerCommand(incommand);
                 break;
             default:
                 Debug.Log("GABE HELP ME IM STUCK IN THE COMPUTER REEEEE");

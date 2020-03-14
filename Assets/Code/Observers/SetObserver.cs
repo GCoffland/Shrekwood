@@ -54,7 +54,7 @@ public class SetObserver : Observer, Selectable
 
     public void select(bool b)
     {
-        Instantiate<GameObject>()
+        //Instantiate<GameObject>();
     }
 
     public void highlight(bool b)
