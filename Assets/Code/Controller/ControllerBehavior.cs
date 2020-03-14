@@ -315,6 +315,7 @@ public class ControllerBehavior : MonoBehaviour
                     }
                     else // No access? Then increment until we find one!
                     {
+
                         while (!possibleactionsArray[actionLocation + 1])
                         {
                             actionLocation++;
