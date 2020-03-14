@@ -9,6 +9,7 @@ public class ControllerBehavior : MonoBehaviour
     Controller cont = Controller.cont;
     public string currentPlayer;
     public string currentPlayerLocation;
+    private bool focusingOnLocations = false;
 
     [SerializeField]
     private AudioClip ahh;
@@ -58,12 +59,30 @@ public class ControllerBehavior : MonoBehaviour
     [SerializeField]
     private Text CreditsText;
 
+    // Locations
+    [SerializeField]
+    private GameObject locationHolder;
+
+    [SerializeField]
+    private GameObject dummyTransform;   //DRAGON THIS ON IN TO SET transform
+
+    [SerializeField]
+    private GameObject prefabLocation;   //THIS ONE IS A PREFAB TO BE COPIED
+
+    private GameObject SelectedLocation;    //currently highlighted location
+
+    private List<GameObject> listOfLocations = new List<GameObject>();
+
+    private int maximumLocation = 0;   //This is for counting the amount of locations
+
+    private int currentLocationOption = 0;  //This is for iterating through the location with arrow keys
+
     // Start is called before the first frame update
     void Awake()
     {
         cont.ProgramStartup();
         cont.GameStartUp();
-        for(int i = 0; i < cont.amountOfPlayers; i++)
+        for (int i = 0; i < cont.amountOfPlayers; i++)
         {
             GameObject temp = GameObject.Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/Player" + i));
             temp.GetComponent<PlayerObserver>().loadPlayer();
@@ -100,6 +119,38 @@ public class ControllerBehavior : MonoBehaviour
         audioSource.PlayOneShot(tok, 1f);
     }
 
+    void SelectLocation(int inloc)
+    {
+        // Reset the old option!
+        SelectedLocation.GetComponent<Text>().color = Color.white;
+        SelectedLocation.GetComponent<Outline>().effectColor = Color.black;
+        // Set the new option
+        SelectedLocation = listOfLocations[inloc];
+        SelectedLocation.GetComponent<Text>().fontStyle = FontStyle.Bold;
+        SelectedLocation.GetComponent<Text>().color = Color.black;
+        SelectedLocation.GetComponent<Outline>().effectColor = Color.white;
+        audioSource.PlayOneShot(tok, 1f);
+    }
+
+    void UpdateLocations()
+    {
+        maximumLocation = 0;
+        listOfLocations.Clear();
+        List<string> locations = Controller.cont.GetPlayerAdjacentLocations();
+        float offset = 0;
+        foreach (string loc in locations)
+        {
+            // Create the new sample locations
+            maximumLocation++;
+            GameObject Temp = GameObject.Instantiate<GameObject>(prefabLocation, locationHolder.transform);
+            listOfLocations.Add(Temp);
+            Temp.GetComponent<Text>().text = loc;
+            Temp.GetComponent<Transform>().transform.position = dummyTransform.transform.position + new Vector3(0, offset, 0);
+            offset -= 20f;
+        }
+
+    }
+
     void DoCurrentOption()
     {
         List<string> incommand = new List<string>(); 
@@ -108,7 +159,12 @@ public class ControllerBehavior : MonoBehaviour
             case 0:
                 Debug.Log("move");
                 incommand.Add("move");// Figure this out!!
-                Controller.cont.ProcessPlayerCommand(incommand);
+                UpdateLocations();
+                SelectedLocation = listOfLocations[0];
+                SelectLocation(0);
+                focusingOnLocations = true; //Dont let us touch the main menu
+                //Cant call this yet
+                //Controller.cont.ProcessPlayerCommand(incommand);
                 break;
             case 1:
                 Debug.Log("take role");
@@ -141,12 +197,16 @@ public class ControllerBehavior : MonoBehaviour
                 break;
         }
     }
-    
+
     // Updates the text to reflect the current players possible actions
     void UpdateActions()
     {
         //Disable all actions then enable the correct ones 
         HashSet<string> actions = cont.GetPlayerActions();
+        for (int i = 0; i < possibleactionsArray.Length; i++)
+        {
+            possibleactionsArray[i] = false;
+        }
         foreach (String action in actions)
         {
             switch(action)
@@ -204,54 +264,103 @@ public class ControllerBehavior : MonoBehaviour
         currentPlayer = cont.gameState.currentPlayer.playerName;
         currentPlayerLocation = cont.gameState.currentPlayer.currentLocation.name;
 
-        if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") < 0) //Arrow down
+        if (!focusingOnLocations)
         {
-            if (actionLocation < 5)
+            if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") < 0) //Arrow down
             {
-                if(possibleactionsArray[actionLocation + 1]) //Does the player have access to this action?
+                if (actionLocation < 5)
                 {
-                    SelectAction(++actionLocation);
-                }
-                else // No access? Then increment until we find one!
-                {
-                    while (!possibleactionsArray[actionLocation + 1])
+                    if (possibleactionsArray[actionLocation + 1]) //Does the player have access to this action?
                     {
-                        actionLocation++;
+                        SelectAction(++actionLocation);
                     }
-                    SelectAction(++actionLocation);
+                    else // No access? Then increment until we find one!
+                    {
+                        while (!possibleactionsArray[actionLocation + 1])
+                        {
+                            actionLocation++;
+                        }
+                        SelectAction(++actionLocation);
+                    }
+                }
+                else
+                {
+                    audioSource.PlayOneShot(tok, 0.2f);
                 }
             }
-            else
+            if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") > 0) //Arrow up
             {
-                audioSource.PlayOneShot(tok, 0.2f);
+                if (actionLocation > 0)
+                {
+                    if (possibleactionsArray[actionLocation - 1]) //Does the player have access to this action?
+                    {
+                        SelectAction(--actionLocation);
+                    }
+                    else // No access? Then increment until we find one!
+                    {
+                        //Check if the 
+                        if(actionLocation - 1 > 0)
+                        {
+                            while (!possibleactionsArray[actionLocation - 1])
+                            {
+                                actionLocation--;
+                            }
+                            SelectAction(--actionLocation);
+                        }
+
+                    }
+                }
+                else
+                {
+                    audioSource.PlayOneShot(tok, 0.2f);
+                }
+            }
+            if (Input.GetButtonDown("Button_A"))
+            {
+                DoCurrentOption();
+                audioSource.PlayOneShot(ahh, 1.0f);
             }
         }
-        if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") > 0) //Arrow up
+        else //focusing on the location menu
         {
-            if (actionLocation > 0)
+            if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") < 0) //Arrow down
             {
-                if (possibleactionsArray[actionLocation - 1]) //Does the player have access to this action?
+                if (currentLocationOption < listOfLocations.Count-1)
                 {
-                    SelectAction(--actionLocation);
+                    SelectLocation(++currentLocationOption);
                 }
-                else // No access? Then increment until we find one!
+                else
                 {
-                    while (!possibleactionsArray[actionLocation - 1])
-                    {
-                        actionLocation--;
-                    }
-                    SelectAction(--actionLocation);
+                    audioSource.PlayOneShot(tok, 0.2f);
                 }
             }
-            else
+            if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") > 0) //Arrow up
             {
-                audioSource.PlayOneShot(tok, 0.2f);
+                if (currentLocationOption > 0)
+                {
+                    SelectLocation(--currentLocationOption);
+                }
+                else
+                {
+                    audioSource.PlayOneShot(tok, 0.2f);
+                }
             }
-        }
-        if (Input.GetButtonDown("Start"))
-        {
-            DoCurrentOption();
-            audioSource.PlayOneShot(ahh, 1.0f);
+            if (Input.GetButtonDown("Button_A"))
+            {
+                List<string> incommand = new List<string>();
+                incommand.Add("move");
+                incommand.Add(listOfLocations[currentLocationOption].GetComponent<Text>().text);// Figure this out!!
+                Controller.cont.ProcessPlayerCommand(incommand);
+                currentLocationOption = 0;
+                audioSource.PlayOneShot(ahh, 1.0f);
+                focusingOnLocations = false;    //REPLACE WITH ENUM REEEEEEEEEEEEE
+                SelectedLocation.GetComponent<Text>().color = Color.white;
+                SelectedLocation.GetComponent<Outline>().effectColor = Color.black;
+                foreach(GameObject g in listOfLocations)
+                {
+                    Destroy(g);
+                }
+            }
         }
     }
 }

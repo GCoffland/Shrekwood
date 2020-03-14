@@ -118,6 +118,8 @@ public class Controller
                 TakeRole(gameState.currentPlayer, gameState.getRoleByName(incommand[1]));
                 break;
             case ("end turn"):
+                gameState.nextPlayer();
+                break;
             case ("back"):
                 break;
             default:
