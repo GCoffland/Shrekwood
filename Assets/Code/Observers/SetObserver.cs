@@ -45,7 +45,8 @@ public class SetObserver : Observer, Selectable
     // Update is called once per frame
     void Update()
     {
-        
+        shotCounters.text = "" + movieSet.shotsRemaining;
+        assignSceneCardRoles();
     }
 
     public void select(STATE s)

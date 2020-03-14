@@ -104,6 +104,7 @@ public class Controller
         {
             case ("act"):
                 Act(gameState.currentPlayer);
+                Debug.Log("Acted");
                 break;
             case ("rehearse"):
                 Rehearse(gameState.currentPlayer);
@@ -139,7 +140,7 @@ public class Controller
 
     public void Act(Player inplayer)  // Just take in the player because their role can be retrieved 
     {
-        //view.displayActResults(inplayer.Act());
+        inplayer.Act();
     }
 
     public void Rehearse(Player inplayer)  // Just take in the player because their role can be retrieved 
